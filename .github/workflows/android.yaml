@@ -21,7 +21,8 @@ jobs:
           java-version: '17'
 
       - name: Configura Android SDK
-        uses: android-actions/setup-android@v3
+        run: echo "ANDROID_HOME=$ANDROID_SDK_ROOT" >> "$GITHUB_ENV"
+        
 
       - name: Configura Gradle
         uses: gradle/actions/setup-gradle@v4
